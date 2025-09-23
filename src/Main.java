@@ -7,5 +7,7 @@ public class Main {
         assert f1.toString().equals("3/5") : "f1 incorrect";
         assert f2.toString().equals("2/1") : "f2 incorrect";
         assert f3.toString().equals("0/1") : "f3 incorrect";
+
+        assert f1.doubleValue() ==  0.6 : "f1 doubleValue incorrect";
     }
 }
