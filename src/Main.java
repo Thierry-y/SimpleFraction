@@ -1,10 +1,11 @@
 public class Main {
     public static void main(String[] args) throws Exception {
-        Fraction f = new Fraction();
+        Fraction f1 = new Fraction(3,5);
+        Fraction f2 = new Fraction(2);
+        Fraction f3 = new Fraction();
         
-        assert f.toString().equals("Je suis une fraction.") 
-            : "Échec : toString() ne retourne pas la chaîne attendue";
-        
-        System.out.println(f);
+        assert f1.toString().equals("3/5") : "f1 incorrect";
+        assert f2.toString().equals("2/1") : "f2 incorrect";
+        assert f3.toString().equals("0/1") : "f3 incorrect";
     }
 }
