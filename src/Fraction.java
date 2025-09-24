@@ -33,4 +33,21 @@ public class Fraction {
     public double doubleValue() {
         return (double) numerateur / denominateur;
     }
+
+    public Fraction add(Fraction f) {
+        int n = this.numerateur * f.denominateur + f.numerateur * this.denominateur;
+        int d = this.denominateur * f.denominateur;
+        return new Fraction(n, d);
+    }
+
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Fraction)) return false;
+        Fraction f = (Fraction) o;
+        return this.numerateur * f.denominateur == f.numerateur * this.denominateur;
+    }
+
+    public boolean compareTo(Fraction f) {
+        return this.numerateur * f.denominateur < f.numerateur * this.denominateur;
+    }
 }
