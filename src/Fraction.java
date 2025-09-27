@@ -1,4 +1,4 @@
-public class Fraction {
+public class Fraction extends Number {
     private int numerateur;
     private int denominateur;
 
@@ -30,8 +30,24 @@ public class Fraction {
         return denominateur;
     }
 
+    @Override
     public double doubleValue() {
         return (double) numerateur / denominateur;
+    }
+
+    @Override
+    public int intValue() {
+        return (int) doubleValue();
+    }
+
+    @Override
+    public float floatValue() {
+        return (float) doubleValue();
+    }
+
+    @Override
+    public long longValue() {
+        return (long) doubleValue();
     }
 
     public Fraction add(Fraction f) {

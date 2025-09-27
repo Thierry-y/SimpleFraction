@@ -15,5 +15,10 @@ public class Main {
         assert f1.equals(new Fraction(6,10)) : "f1 equals incorrect";
 
         assert f1.compareTo(f2) : "f1 < f2 incorrect";
+
+         // Vérifiez avec le code ci-dessous
+        Number aNumber = java.math.BigDecimal.ONE;
+        Number anotherNumber = new Fraction(1, 2);
+        assert java.lang.Math.abs(aNumber.doubleValue() + anotherNumber.doubleValue() - 1.5) < 1E-8 : "Number addition incorrect";
     }
 }
